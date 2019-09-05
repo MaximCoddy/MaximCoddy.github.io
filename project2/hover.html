@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			height: auto;
+			min-width: 320px;
+   	 		max-width: 480px;
+   	 		max-height: 360px;
+			width: calc(100% / 2 - 20px);
+			overflow: hidden;
+			position: relative;
+		}
+
+		.box img {
+			position: relative;
+		    display: block;
+		    min-height: 100%;
+		    
+		    opacity: 0.8;
+
+		    height: 400px;
+		    -webkit-transition: opacity 1s, -webkit-transform 1s;
+		    transition: opacity 1s, transform 1s;
+		    -webkit-backface-visibility: hidden;
+		    backface-visibility: hidden;
+		}
+
+		.container {
+			max-width: 1000px;
+			margin: auto;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.box:hover img {
+			max-width: none;
+			transform: scale3d(1.1,1.1,1);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<img src="p5.jpg" alt="">
+			<div class="content">
+				<p class="text">Lorem ipsum dolor sit.</p>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur.</p>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</div>
+		</div>
+		<div class="box">
+			<img src="p3.jpg" alt="">
+			<div class="content">
+				<p class="text">Lorem ipsum dolor sit.</p>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur.</p>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
