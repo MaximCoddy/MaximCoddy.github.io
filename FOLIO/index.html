@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FOLIO</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<div class="overlay">
+		<div class="menu-box">
+			
+			<div class="photo-box">
+				<img src="s1.png" alt="" class="shape shape1">
+				<img src="x.png" alt="" class="x">
+				<img src="s2.png" alt="" class="shape shape2">
+				<img src="s3.png" alt="" class="shape shape3">
+			</div>
+			<h2 class="menu-title">Hello, I'm <span style='font-weight: 900; color:#fff;'>Maxim</span></h2>
+			<p class="menu-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, debitis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, debitis.</p>
+			<p class="menu-text opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<a href='#' class='menu-link'>contact me</a></p>
+			<div class="skill-box">
+				<div class="skill skill1">
+					<p class="skill-title">photoshop</p>
+					<div class="skill-line">
+						<span class="color-line"></span>
+					</div>
+					<div class="skill-level">91%</div>
+				</div>
+				<div class="skill skill2">
+					<p class="skill-title">HTML/CSS</p>
+					<div class="skill-line">
+						<span class="color-line"></span>
+					</div>
+					<div class="skill-level">80%</div>
+				</div>
+				<div class="skill skill3">
+					<p class="skill-title">JS</p>
+					<div class="skill-line">
+						<span class="color-line"></span>
+					</div>
+					<div class="skill-level">70%</div>
+				</div>
+			</div>
+			<div class="skill-box">
+				<div class="date-box">
+					<div class="date">2008-2010</div>
+					<div class="date-text">Graphic Specialist   |<a href="" class="menu-link">GRAPHICSTUDIO</a></div>
+				</div>
+				<div class="date-box">
+					<div class="date">2008-2010</div>
+					<div class="date-text">Graphic Specialist   |<a href="" class="menu-link">GRAPHICSTUDIO</a></div>
+				</div>
+				<div class="date-box">
+					<div class="date">2008-2010</div>
+					<div class="date-text">Graphic Specialist   |<a href="" class="menu-link">GRAPHICSTUDIO</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dotted"></div>
+	<div class="container">
+		<nav class="topnav">
+			<div class="logo lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self">FO<span>L</span>IO</div>
+			<div class="menu lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
+		</nav>
+		<div class="hello lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self"><span>Hello,</span><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, molestias sunt vel eius laudantium. Fugiat?</div>
+		
+		<div class="box">
+			<div class="item lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self" style='background-color: #baecee;'><span class="readmore"><span class="text-box"></span><span class="text">read more</span></span></div>
+			<div class="item lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self" style='background-color: #fae1ef;'><span class="readmore"><span class="text-box"></span><span class="text">read more</span></span></div>
+			<div class="item lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self" style='background-color: #fefbe5;'><span class="readmore"><span class="text-box"></span><span class="text">read more</span></span></div>
+			<div class="item lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self" style='background-color: #e8bdf5;'><span class="readmore"><span class="text-box"></span><span class="text">read more</span></span></div>
+		</div>
+
+		<div class="phone-box">
+			<div class="loading lax" data-lax-preset="fadeIn">LOADING</div>
+			<img src="phone.png" class="phone lax" data-lax-preset="fadeIn" alt="">
+			<div class="phone-number lax" data-lax-preset="fadeIn">+7 (977) 368-48-08</div>
+			<div class="phone-inf lax" data-lax-preset="fadeIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aliquam eligendi rerum placeat vel quam facere adipisci deserunt rem aliquid.</div>
+			<div class="social lax" data-lax-preset="fadeIn">
+				<a href="#" class="social-link">Facebook</a>
+				<a href="#" class="social-link">Twitter</a>
+				<a href="#" class="social-link">Dribble</a>
+			</div>
+			
+		</div>
+		<div class="vertical lax" data-lax-preset="fadeIn"></div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+	<script>
+		window.onload = function() {
+			lax.setup() // init
+
+			const updateLax = () => {
+				lax.update(window.scrollY)
+				window.requestAnimationFrame(updateLax)
+			}
+
+			window.requestAnimationFrame(updateLax)
+
+			const close = document.querySelector('.x');
+			const overlay = document.querySelector('.overlay');
+			const menu = document.querySelector('.menu');
+
+			close.onclick = function() {
+				console.log('Нажали на close');
+				overlay.classList.remove('openned');
+				
+				setTimeout(function() {
+					overlay.style.display = 'none';
+				}, 900);
+			}
+
+			menu.onclick = function() {
+				overlay.style.display = 'flex';
+				setTimeout(function() {
+					overlay.classList.add('openned');
+				}, 10);
+			}
+
+
+		}
+	</script>
+</body>
+</html>
