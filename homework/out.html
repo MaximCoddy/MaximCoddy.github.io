@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Домашнее задание 1 (JS)
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   html {
+				font-size: 20px;
+				font-family: 'Roboto Slab', serif;
+				line-height: 1.75;
+			}
+			.container {
+				max-width: 800px;
+				margin: auto;
+				width: 95%;
+				font-size: 18px;
+			}
+			.main-title {
+				font-size: 3rem;
+				margin: 1rem 0 ;
+			}
+			.title {
+				font-size: 2.5rem;
+				margin: 0.5rem 0 ;
+			}
+			.code {
+				font-size: 0.9rem;
+			}
+			.text {
+				font-size: 1rem;
+			}
+			.tasks {
+				list-style-type: none;
+			}
+			.task {
+				font-size: 1rem;
+			}
+			.mt {
+				margin-top: 30px;
+			}
+			.num {
+				display: inline-block;
+				margin-right: 5px;
+				font-size: 2rem;
+				font-weight: bold;
+				line-height: 1;
+			}
+			.code {
+			line-height: 1;
+			display: inline-block;
+			margin-right: 4px;
+			padding: 3px 6px;
+			font-family: monospace;
+			color: #fff;
+			border-radius: 4px;
+			background-color: #2c292d
+			}
+			.code {
+			display: block;
+			overflow: auto;
+			padding: 10px 20px;
+			/*white-space: nowrap*/
+			line-height: 1.5;
+			}
+			.code_text {
+			white-space: normal
+			}
+			.grey {
+			color: #a9a9a9
+			}
+			.yellow {
+			color: #ffd865
+			}
+			.blue {
+			color: #78dce9
+			}
+			.green {
+			color: #aadc76
+			}
+			#down:active,.red {
+			color: #ff6189
+			}
+			.orange {
+			font-style: italic;
+			color: #fc9968
+			}
+			.purple {
+			color: #aa9ef2
+			}
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1 class="main-title">
+    Домашнее задание 1 (JS)
+   </h1>
+   <h2 class="title">
+    Вывод данных
+   </h2>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>()
+   </p>
+   <p class="text">
+    В качестве списка аргументов функция получает информацию, которую нужно вывести, например:
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(<span class="purple">10</span>);
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(<span class="yellow">'Hello world'</span>);
+   </p>
+   <p class="text">
+    Можно передать не один, а несколько значений:
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(<span class="purple">true</span>, <span class="purple">10</span>, <span class="yellow">'Hi'</span>, <span class="purple">123</span>);
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(<span class="purple">10</span>, <span class="purple">1</span>, <span class="purple">2</span>);
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(<span class="yellow">'a'</span>, <span class="yellow">'b'</span>, <span class="yellow">'c'</span>);
+   </p>
+   <h2 class="title">
+    Переменные и типы данных
+   </h2>
+   <p class="text">
+    Переменной в программировании называется контейнер для некоторого значения. Для создания переменной используется модификатор (специальное слово для объявления имени переменной). В JS есть три модификатора:
+   </p>
+   <p class="text">
+    1. var
+   </p>
+   <p class="text">
+    2. const
+   </p>
+   <p class="text">
+    3. let
+   </p>
+   <p class="text">
+    Модификатор const создает неизменяемую переменную. В чем отличие let и var, мы разберем позднее.
+   </p>
+   <p class="code">
+    <span class="blue">var</span> name<span class="red"> = </span><span class="yellow">'Maxim'</span>;
+   </p>
+   <p class="code">
+    <span class="blue">var</span> age<span class="red"> = </span><span class="purple">20</span>;
+   </p>
+   <p class="code">
+    <span class="blue">var</span> hobby<span class="red"> = </span><span class="yellow">'Programming'</span>;
+   </p>
+   <p class="code">
+    <span class="blue">var</span> myLunchIsReady<span class="red"> = </span><span class="purple">false</span>;
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(name, age, hobby, myLunchIsReady);
+   </p>
+   <h2 class="title">
+    Типы данных
+   </h2>
+   <p class="text">
+    В каждом языке программирования есть различные типы данных, например, числа, строки, булевы переменные и так далее. JavaScript не является исключением, в нем есть эти три основных типа данных (на самом деле их больше, остальные рассмотрим позднее).
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(name, typeof(name));
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(age, typeof(age));
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(hobby, typeof(hobby));
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(myLunchIsReady, typeof(myLunchIsReady));
+   </p>
+   <p class="text">
+    Функция typeof() позволяет узнать тип данных переменной.
+   </p>
+   <p class="text">
+    string, number и boolean - это три основных типа данных.
+   </p>
+   <h2 class="title">
+    Арифметические операции
+   </h2>
+   <p class="text">
+    До того, как мы перейдем к арифметике в JS, давайте познакомимся с методом выбора случайного числа.
+   </p>
+   <h2 class="title">
+    <Подзаголовок>Функция random
+   </h2>
+   <p class="code">
+    <span class="blue">var</span> my_random_number<span class="red"> = </span>Math.<span class="blue">random</span>();
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(my_random_number);
+   </p>
+   <p class="text">
+    При каждом новом запуске этого скрипта будет выводится случайное число в диапазоне от 0 до 1.Расширим диапазон, умножим результат работы функции random на 10:
+   </p>
+   <p class="code">
+    <span class="blue">var</span> my_random_number<span class="red"> = </span>Math.<span class="blue">random</span>() <span class="red">* </span><span class="purple">10</span>;
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(my_random_number);
+   </p>
+   <p class="text">
+    Теперь результат будет лежать в диапазоне от 0 до 10. Округлим полученное число вниз (9.87126378 -> 9, 1.7213781-> 1)
+   </p>
+   <p class="code">
+    <span class="blue">var</span> my_random_number<span class="red"> = </span><span class="blue">parseInt</span>( Math.<span class="blue">random</span>() <span class="red">* </span><span class="purple">10</span> );
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(my_random_number);
+   </p>
+   <p class="text">
+    Функция parseInt() делает значение целочисленным (без дробной части).
+   </p>
+   <h2 class="title">
+    Арифметические операции
+   </h2>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(<span class="purple">10</span> <span class="red">* </span><span class="purple">3</span>);
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(<span class="purple">10</span> <span class="red">+ </span><span class="purple">3</span>);
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(<span class="purple">10</span> <span class="red">- </span><span class="purple">3</span>);
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(<span class="purple">10</span><span class="red"> / </span><span class="purple">3</span>);
+   </p>
+   <p class="code">
+    <span class="blue">console</span>.<span class="blue">log</span>(<span class="purple">10</span> <span class="red">% </span><span class="purple">3</span>); <span class="grey">// Взятие остатка от деления (19 % 2 == 1, 28 % 15 == 13, 30 % 25 = 5)</span>
+   </p>
+   <h2 class="title">
+    Задачи на арифметику
+   </h2>
+   <p class="text mt">
+    <span class="num">
+     1.
+    </span>
+    Найти длину окружности L и площадь круга S заданного радиуса R. Формула: L = 2*π*R, S = π*R*R . В качестве значения π использовать 3.14
+   </p>
+   <p class="text mt">
+    <span class="num">
+     2.
+    </span>
+    Даны два числа a и b. Найти их среднее арифметическое: (a + b)/2.
+   </p>
+   <p class="text mt">
+    <span class="num">
+     3.
+    </span>
+    Вводится x, найти значение выражения: 3*(x**6) – 6*(x**2) – 7
+			где x**6 - это икс в степени 6 или x*x*x*x*x*x, пример:
+    <p class="code">
+     <span class="blue">console</span>.<span class="blue">log</span>(Math.<span class="blue">pow</span>(<span class="purple">4</span>, <span class="purple">2</span>)) <span class="grey">// 16</span>
+    </p>
+    <p class="code">
+     <span class="blue">console</span>.<span class="blue">log</span>(Math.<span class="blue">pow</span>(<span class="purple">3</span>, <span class="purple">3</span>)) <span class="grey">// 27</span>
+    </p>
+    <p class="code">
+     <span class="blue">console</span>.<span class="blue">log</span>(Math.<span class="blue">pow</span>(<span class="purple">5</span>, <span class="purple">3</span>)) <span class="grey">// 125</span>
+    </p>
+    <p class="text mt">
+     <span class="num">
+      4.
+     </span>
+     Дано значение температуры T в градусах Цельсия. Определить значение этой же температуры в градусах Фаренгейта. Температура по Цельсию Tс и температура по Фаренгейту TF связаны следующим соотношением: TC = (TF − 32)·5/9.
+    </p>
+    <p class="text mt">
+     <span class="num">
+      5.
+     </span>
+     Известно, что X кг конфет стоит A рублей. Определить, сколько стоит 1 кг и Y кг этих же конфет
+    </p>
+    <p class="text">
+     <span class="num">
+      6.
+     </span>
+     Дано расстояние L в сантиметрах. Используя операцию деления нацело, найти количество полных метров в нем (1 метр = 100 см).
+    </p>
+    <p class="text mt">
+     <span class="num">
+      7.
+     </span>
+     Дана масса M в килограммах. Используя операцию деления нацело, найти количество полных тонн в ней (1 тонна = 1000 кг)
+    </p>
+    <p class="text mt">
+     <span class="num">
+      8.
+     </span>
+     Дан размер файла в байтах. Используя операцию деления нацело, найти количество полных килобайтов, которые занимает данный файл (1 килобайт = 1024 байта)
+    </p>
+    <p class="text mt">
+     <span class="num">
+      9.
+     </span>
+     Даны целые положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Используя операцию деления нацело, найти количество отрезков B, размещенных на отрезке A.
+    </p>
+   </p>
+  </div>
+ </body>
+</html>
